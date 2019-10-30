@@ -4,3 +4,4 @@ if (!empty($_GET["page"])) {
 } else {
     include "home.php";
 }
+// content ni
