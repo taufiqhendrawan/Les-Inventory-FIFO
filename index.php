@@ -2,6 +2,7 @@
 session_start();
 //koneksi ke database
 include('koneksi.php');
+error_reporting(0);
 if (empty($_SESSION['pengguna'])) {
     echo "<script>
   alert('Anda harus login');

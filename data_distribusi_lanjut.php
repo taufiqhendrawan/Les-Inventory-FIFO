@@ -152,7 +152,7 @@
                             if ($tambah) {
                                 echo "<script>alert('Data berhasil di tambah');</script>";
                                 echo header('index.php?page=data_distribusi');
-                                echo "<script>window . open('aksi_distribusi/cetak.php', '_blank')</script>";
+                                echo "<script>window.location('aksi_distribusi/cetak.php','_blank')</script>";
                             } else {
                                 echo "<script>alert('Data gagal di tambah');</script>";
                                 echo "<script>window.location='index.php?page=data_distribusi'</script>";
@@ -215,7 +215,6 @@
 
                         $ambil_konsumen = $koneksi->query("SELECT * FROM tb_barang_kel JOIN tb_detail_kel ON tb_barang_kel.kel_id=tb_detail_kel.kel_id JOIN tb_barang ON tb_detail_kel.barang_id=tb_barang.barang_id JOIN tb_pelanggan ON tb_barang_kel.pelanggan_id=tb_pelanggan.pelanggan_id WHERE tb_barang_kel.kel_id=$kel");
                         while ($pecah_konsumen = $ambil_konsumen->fetch_object()) {
-                            ?>
                             ?>
                             <tr class="odd gradeX">
                                 <td>
